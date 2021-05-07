@@ -75,7 +75,7 @@
   float: right;
 }
 .cover {
-  height: 150px;
+  border-radius: 6px;
   width: 100%;
   object-fit: contain;
 }
