@@ -23,6 +23,7 @@
   <div class="gallery-grid">
     <mat-card class="example-card" *ngFor="let roll of rolls; let i = index">
       <mat-card-content>
+        <mat-card-title class="logo-text navContainer">{{roll.name}}</mat-card-title>
         <img class="cover" [src]="roll.image_url" alt="weapon">
         <p>
           <label class="label-margin" for="image_url">Image Url:</label>
@@ -35,71 +36,128 @@
         <p>
           <label for="name">Weapon:</label>
           <select [(ngModel)]="roll.name" type="text" class="form-select" data-live-search="true">
-            <option value="The Swarm">The Swarm</option>
-            <option value="Palindrome">Palindrome</option>
-            <option value="Shadow Price">Shadow Price</option>
-            <option value="Salvager's Salvo">Salvager's Salvo</option>
-            <option value="Extraordinary Rendition">Extraordinary Rendition</option>
-            <option value="Imperial Needle">Imperial Needle</option>
-            <option value="Brass Attacks">Brass Attacks</option>
-            <option value="Far Future">Far Future</option>
-            <option value="Threaded Needle">Threaded Needle</option>
-            <option value="Code Duello">Code Duello</option>
-            <option value="The Third Axiom">The Third Axiom</option>
-            <option value="Royal Entry">Royal Entry</option>
-            <option value="Frozen Orbit">Frozen Orbit</option>
-            <option value="The Keening">The Keening</option>
-            <option value="Bottom Dollar">Bottom Dollar</option>
-            <option value="Trinary System">Trinary System</option>
-            <option value="Multimach CCX">Multimach CCX</option>
-            <option value="The Time-Worn Spire">The Time-Worn Spire</option>
-            <option value="The Messenger">The Messenger</option>
-            <option value="Igneous Hammer">Igneous Hammer</option>
-            <option value="Sola's Scar">Sola's Scar</option>
-            <option value="Astral Horizon">Astral Horizon</option>
-            <option value="Exile's Curse">Exile's Curse</option>
-            <option value="Tomorrow's Answer">Tomorrow's Answer</option>
-            <option value="Retrofuturist">Retrofuturist</option>
-            <option value="Cartesian Coordinate">Cartesian Coordinate</option>
-            <option value="Tarantula">Tarantula</option>
-            <option value="Salvager's Salvo">Salvager's Salvo</option>
+            <optgroup label="Assault Rifles">
+              <option value="Shadow Price">Shadow Price</option>
+            </optgroup>
+            <optgroup label="Bows">
+              <option value="Imperial Needle">Imperial Needle</option>
+            </optgroup>
+            <optgroup label="Fusion Rifles">
+              <option value="Cartesian Coordinate">Cartesian Coordinate</option>
+              <option value="Exile's Curse">Exile's Curse</option>
+              <option value="Trinary System">Trinary System</option>
+            </optgroup>
+            <optgroup label="Grenade Launchers">
+              <option value="Salvager's Salvo">Salvager's Salvo</option>
+            </optgroup>
+            <optgroup label="Hand Cannons">
+              <option value="Bottom Dollar">Bottom Dollar</option>
+              <option value="Igneous Hammer">Igneous Hammer</option>
+              <option value="Palindrome">Palindrome</option>
+              <option value="Posterity">Posterity</option>
+            </optgroup>
+            <optgroup label="Heavy Grenade Launchers">
+              <option value="Blast Battue">Blast Battue</option>
+            </optgroup>
+            <optgroup label="Linear Fusion Rifles">
+              <option value="Tarantula">Tarantula</option>
+              <option value="Threaded Needle">Threaded Needle</option>
+            </optgroup>
+            <optgroup label="Machine Guns">
+              <option value="Commemoration">Commemoration</option>
+              <option value="The Swarm">The Swarm</option>
+            </optgroup>
+            <optgroup label="Pulse Rifles">
+              <option value="The Third Axiom">The Third Axiom</option>
+              <option value="The Time-Worn Spire">The Time-Worn Spire</option>
+              <option value="The Messenger">The Messenger</option>
+            </optgroup>
+            <optgroup label="Rocket Launchers">
+              <option value="Code Duello">Code Duello</option>
+              <option value="Royal Entry">Royal Entry</option>
+              <option value="Tomorrow's Answer">Tomorrow's Answer</option>
+            </optgroup>
+            <optgroup label="Scout Rifles">
+              <option value="Eternal Blazon">Eternal Blazon</option>
+              <option value="Trustee">Trustee</option>
+            </optgroup>
+            <optgroup label="Sidearms">
+              <option value="Brass Attacks">Brass Attacks</option>
+              <option value="The Keening">The Keening</option>
+            </optgroup>
+            <optgroup label="Shotguns">
+              <option value="Astral Horizon">Astral Horizon</option>
+              <option value="Heritage">Heritage</option>
+              <option value="Retrofuturist">Retrofuturist</option>
+            </optgroup>
+            <optgroup label="Snipers">
+              <option value="Far Future">Far Future</option>
+              <option value="Frozen Orbit">Frozen Orbit</option>
+              <option value="Succession">Succession</option>
+            </optgroup>
+            <optgroup label="Submachine Guns">
+              <option value="Extraordinary Rendition">Extraordinary Rendition</option>
+              <option value="Multimach CCX">Multimach CCX</option>
+            </optgroup>
+            <optgroup label="Swords">
+              <option value="Bequest">Bequest</option>
+              <option value="Sola's Scar">Sola's Scar</option>
+            </optgroup>
           </select>
         </p>
         <p>
-          <label for="barrel">Barrel:</label>
+          <label for="barrel">Barrel/Blade:</label>
           <select [(ngModel)]="roll.barrel" type="text" class="form-select" data-live-search="true">
-            <option value="Arrowhead Brake">Arrowhead Break</option>
-            <option value="Barrel Shroud">Barrel Shroud</option>
-            <option value="Chambered Compensator">Chambered Compensator</option>
-            <option value="Corkscrew Rifling">Corkscrew Rifling</option>
-            <option value="Extended Barrel">Extended Barrel</option>
-            <option value="Fluted Barrel">Fluted Barrel</option>
-            <option value="Full Bore">Full Bore</option>
-            <option value="Full Choke">Full Choke</option>
-            <option value="Hammer-Forged Rifling">Hammer-Forged Rifling</option>
-            <option value="Polygonal Rifling">Polygonal Rifling</option>
-            <option value="Rifled Barrel">Rifled Barrel</option>
-            <option value="Smallbore">Smallbore</option>
-            <option value="Smoothbore">Smoothbore</option>
+            <optgroup label="Barrels">
+              <option value="Arrowhead Brake">Arrowhead Break</option>
+              <option value="Barrel Shroud">Barrel Shroud</option>
+              <option value="Chambered Compensator">Chambered Compensator</option>
+              <option value="Corkscrew Rifling">Corkscrew Rifling</option>
+              <option value="Extended Barrel">Extended Barrel</option>
+              <option value="Fluted Barrel">Fluted Barrel</option>
+              <option value="Full Bore">Full Bore</option>
+              <option value="Full Choke">Full Choke</option>
+              <option value="Hammer-Forged Rifling">Hammer-Forged Rifling</option>
+              <option value="Polygonal Rifling">Polygonal Rifling</option>
+              <option value="Rifled Barrel">Rifled Barrel</option>
+              <option value="Smallbore">Smallbore</option>
+              <option value="Smoothbore">Smoothbore</option>
+            </optgroup>
+            <optgroup label="Blades">
+              <option value="Enduring Blade">Enduring Blade</option>
+              <option value="Honed Edge">Honed Edge</option>
+              <option value="Hungry Edge">Hungry Edge</option>
+              <option value="Jagged Edge">Jagged Edge</option>
+              <option value="Tempered Edge">Tempered Edge</option>
+            </optgroup>
           </select>
         </p>
         <p>
-          <label for="ammo">Ammo:</label>
+          <label for="ammo">Ammo/Guard:</label>
           <select [(ngModel)]="roll.ammo" type="text" class="form-select" data-live-search="true">
-            <option value="Alloy Magazine">Alloy Magazine</option>
-            <option value="Armor-Piercing Rounds">Armor-Piercing Rounds</option>
-            <option value="Assault Mag">Assault Mag</option>
-            <option value="Blinding Grenades">Blinding Grenades</option>
-            <option value="Concussion Grenades">Concussion Grenades</option>
-            <option value="Drop Mag">Drop Mag</option>
-            <option value="High-Caliber Rounds">High-Caliber Rounds</option>
-            <option value="Impact Casing">Impact Casing</option>
-            <option value="Phase Magazine">Phase Magazine</option>
-            <option value="Proximity Grenades">Proximity Grenades</option>
-            <option value="Seraph Rounds">Seraph Rounds</option>
-            <option value="Spike Grenades">Spike Grenades</option>
-            <option value="Accelerated Coils">Accelerated Coils</option>
-            <option value="Liquid Coils">Liquid Coils</option>
+            <optgroup label="Ammunitions">
+              <option value="Alloy Magazine">Alloy Magazine</option>
+              <option value="Armor-Piercing Rounds">Armor-Piercing Rounds</option>
+              <option value="Assault Mag">Assault Mag</option>
+              <option value="Blinding Grenades">Blinding Grenades</option>
+              <option value="Concussion Grenades">Concussion Grenades</option>
+              <option value="Drop Mag">Drop Mag</option>
+              <option value="High-Caliber Rounds">High-Caliber Rounds</option>
+              <option value="Impact Casing">Impact Casing</option>
+              <option value="Phase Magazine">Phase Magazine</option>
+              <option value="Proximity Grenades">Proximity Grenades</option>
+              <option value="Seraph Rounds">Seraph Rounds</option>
+              <option value="Spike Grenades">Spike Grenades</option>
+              <option value="Accelerated Coils">Accelerated Coils</option>
+              <option value="Liquid Coils">Liquid Coils</option>
+            </optgroup>
+            <optgroup label="Guards">
+              <option value="Balanced Guard">Balanced Guard</option>
+              <option value="Burst Guard">Burst Guard</option>
+              <option value="Enduring Guard">Enduring Guard</option>
+              <option value="Heavy Guard">Heavy Guard</option>
+              <option value="Swordmaster's Guard">Swordmaster's Guard</option>
+            </optgroup>
           </select>
         </p>
         <p>

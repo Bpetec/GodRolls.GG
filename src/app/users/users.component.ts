@@ -82,5 +82,13 @@ export class UsersComponent implements OnInit {
     }
   }
 
+  async logout() {
+    const resp = await this.http.logout();
+    if (resp.statusCode === 200) {
+      localStorage.removeItem('id_token');
+      this.router.navigate(['login']);
+    }
+  }
+
 
 }

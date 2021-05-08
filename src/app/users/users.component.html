@@ -5,7 +5,7 @@
     <button type="button" class="navBtn btn btn-light" [routerLink]="['']">Home</button>
     <button type="button" class="navBtn btn btn-light" [routerLink]="['/picks']">Seasonal Picks</button>
     <button type="button" class="navBtn btn btn-light" [routerLink]="['/about']">About</button>
-    <button type="button" class="navBtn btn btn-light" [routerLink]="['users']">Users</button>
+    <button type="button" class="navBtn btn btn-light" [routerLink]="['/users']">Users</button>
   </div>
   <div class="logDiv"> 
     <button mat-raised-button color="accent" class="logBtn" *ngIf="!currentUser" (click)="logout()">Logout</button>
