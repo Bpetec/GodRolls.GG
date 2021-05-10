@@ -109,7 +109,7 @@
           <label for="barrel">Barrel/Blade:</label>
           <select [(ngModel)]="roll.barrel" type="text" class="form-select" data-live-search="true">
             <optgroup label="Barrels">
-              <option value="Arrowhead Brake">Arrowhead Break</option>
+              <option value="Arrowhead Brake">Arrowhead Brake</option>
               <option value="Barrel Shroud">Barrel Shroud</option>
               <option value="Chambered Compensator">Chambered Compensator</option>
               <option value="Corkscrew Rifling">Corkscrew Rifling</option>
@@ -131,6 +131,7 @@
               <option value="Tempered Edge">Tempered Edge</option>
             </optgroup>
           </select>
+
         </p>
         <p>
           <label for="ammo">Ammo/Guard:</label>
@@ -162,7 +163,8 @@
         </p>
         <p>
           <label for="perkOne">Perk One:</label>
-          <select [(ngModel)]="roll.perkOne" class="form-select" data-live-search="true">
+          <input list="perkOne-list" type="text" [(ngModel)]="roll.perkOne" class="form-select" data-live-search="true">
+          <datalist id="perkOne-list">
             <option value="Aggressive Launch">Aggressive Launch</option>
             <option value="Army of One">Army of One</option>
             <option value="Air Assault">Air Assault</option>
@@ -255,17 +257,18 @@
             <option value="Wellspring">Wellspring</option>
             <option value="Whirlwind Blade">Whirlwind Blade</option>
             <option value="Zen Moment">Zen Moment</option>
-          </select>
+          </datalist>
         </p>
         <p>
           <label for="perkTwo">Perk Two:</label>
-          <select [(ngModel)]="roll.perkTwo" class="form-select" data-live-search="true">
+          <input list="perkTwo-list" type="text" [(ngModel)]="roll.perkTwo" class="form-select" data-live-search="true">
+          <datalist id="perkTwo-list">
             <option value="Accelerated Coils">Accelerated Coils</option>
             <option value="Aggressive Launch">Aggressive Launch</option>
             <option value="Armor Piercing Rounds">Armor Piercing Rounds</option>
             <option value="Army of One">Army of One</option>
             <option value="Air Assault">Air Assault</option>
-            <option value="Ambitious Assassin">Ambitious Asssassin</option>
+            <option value="Ambitious Assassin">Ambitious Assassin</option>
             <option value="Archer's Tempo">Archer's Tempo</option>
             <option value="Assassin's Blade">Assassin's Blade</option>
             <option value="Auto-Loading Holster">Auto-Loading Holster</option>
@@ -354,7 +357,7 @@
             <option value="Wellspring">Wellspring</option>
             <option value="Whirlwind Blade">Whirlwind Blade</option>
             <option value="Zen Moment">Zen Moment</option>
-          </select>
+          </datalist>
         </p>
         <p>
           <label for="source">Source:</label>
